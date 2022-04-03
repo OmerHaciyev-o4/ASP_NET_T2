@@ -1,0 +1,71 @@
+﻿@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+
+* {
+    font-family: 'Cascadia Code';
+    color: white;
+}
+
+
+body {
+    background-color: grey;
+}
+
+#titleTag {
+    text-align: center;
+    font-size: 1.3em;
+}
+
+hr {
+    border-color: black !important;
+    color: black;
+}
+
+#allPlayer {
+    width: 30%;
+    height: 70vh;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    overflow-y: scroll;
+}
+
+#playerBox {
+    width: 100%;
+    height: 24vh;
+}
+
+#playerBox > * {
+    display: inline-block;
+}
+
+#playerBox > img {
+    width: 40%;
+    height: 100%;
+    background-color: blue;
+}
+
+#playerBox > #playerInfoPanel {
+    width: 57.57%;
+    height: 100%;
+    vertical-align: top;
+}
+
+body > button {
+    width: 15%;
+    height: 50px;
+    background-color: dodgerBlue;
+    color: white;
+    font-size: 0.9em;
+    border: 0;
+    padding: 5px;
+    margin-left: 42.5%;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: 1s;
+}
+
+body > button:hover {
+    background-color: blue !important;
+    transition: 1s !important;
+}

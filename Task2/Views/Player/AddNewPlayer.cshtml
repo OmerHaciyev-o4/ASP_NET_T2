@@ -1,0 +1,35 @@
+﻿@using System.Security.Cryptography
+@using Task2.Entities
+@model Task2.Entities.Player
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = null;
+    string url = "";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Registration</title>
+    <link rel="stylesheet" href="~/css/addNewPlayerPageStyle.css" />
+</head>
+<body>
+    <h4 id="titleTag">Player Registration</h4>
+    <hr />
+
+    <form asp-controller="player" asp-action="AddNewPlayer" name="addForm" enctype="multipart/form-data">
+        <label for="playerName">Name: </label>
+        <input id="playerName" asp-for="Name" type="text" placeholder="Enter name..." required="required" />
+        <label for="playerSurname">Surname: </label>
+        <input id="playerSurname" asp-for="Surname" type="text" placeholder="Enter surname..." required="required" />
+        <label for="playerAge">Age: </label>
+        <input id="playerAge" asp-for="Age" type="number" max="100" min="18" value="18" placeholder="Select age..." required="required" />
+        <input asp-for="File" type="file" required="required" />
+
+        <button id="registBtn">Register</button>
+    </form>
+</body>
+</html>
